@@ -173,9 +173,10 @@
     width: var(--game-choice-ratio);
     height: var(--game-choice-ratio);
     padding: 15px;
-    background-color: white;
+    background-color: transparent;
     border-radius: 50%;
     transition: all var(--timing-animation);
+    box-shadow: 0 0 1px 0 rgba(255, 255, 255, 1);
 }
 
 .game-content__game-choice:active::after{
