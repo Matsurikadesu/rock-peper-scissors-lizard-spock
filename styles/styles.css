@@ -176,7 +176,6 @@
     background-color: transparent;
     border-radius: 50%;
     transition: all var(--timing-animation);
-    box-shadow: 0 0 1px 0 rgba(255, 255, 255, 1);
 }
 
 .game-content__game-choice:active::after{
@@ -202,6 +201,10 @@
     border-radius: 50%;
 }
 
+.game-content__game-choice-computer::before{
+    background: white;
+}
+
 .game-content__game-choice_scissors::before{
     background: linear-gradient(#ec9e0e, #eca922);;
 }
@@ -211,10 +214,12 @@
 }
 .game-content__game-choice_scissors{
     transform: translate(0, -50px);
+    box-shadow: 0 0 1px 1px #eca922;
 }
 
 .game-content__game-choice_paper{
     transform: translate(165px, 75px);
+    box-shadow: 0 0 1px 1px #5671f5;
 }
 
 .game-content__game-choice_paper::after{    
@@ -227,6 +232,7 @@
 
 .game-content__game-choice_rock{
     transform: translate(90px, 270px);
+    box-shadow: 0 0 1px 1px #dd405d;
 }
 
 .game-content__game-choice_rock::before{
@@ -234,11 +240,12 @@
 }
 
 .game-content__game-choice_rock::after{
-    border-bottom: 4px solid #841f32;
+    border-bottom: 4px solid #ad2c44;
 }
 
 .game-content__game-choice_lizard{
     transform: translate(-95px, 270px);
+    box-shadow: 0 0 1px 1px #a65aad;
 }
 
 .game-content__game-choice_lizard::after{    
@@ -251,6 +258,7 @@
 
 .game-content__game-choice_spock{
     transform: translate(-165px, 75px);
+    box-shadow: 0 0 1px 1px #56a8f5;
 }
 
 .game-content__game-choice_spock::after{    
