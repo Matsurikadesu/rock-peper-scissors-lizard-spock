@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Rock Paper Scissors Lizard Spock</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-content">
+            <header class="header">
+                <img src="images/logo-bonus.svg" alt="Rock Paper Scissors Lizard Spock" class="header__logo">
+                <div class="header__score">
+                    <span class="header__score-title">score</span>
+                    <span class="header__score-number">0</span>
+                </div>
+            </header>
+            <div class="game-content">
+                <div class="game-content__bg"></div>
+                <div class="game-content__text game-content__text_your-choice">You Picked</div>
+                <div class="game-content__text game-content__text_computer-choice">The house picked</div>
+
+                <div class="game-content__game-choice game-content__game-choice_scissors" data-choice="scissors">
+                    <div class="game-content__image">
+                        <img src="images/icon-scissors.svg" alt="scissors">
+                    </div>
+                </div>
+                <div class="game-content__game-choice game-content__game-choice_paper" data-choice="paper">
+                    <div class="game-content__image">
+                        <img src="images/icon-paper.svg" alt="paper">
+                    </div>
+                </div>
+                <div class="game-content__game-choice game-content__game-choice_rock" data-choice="rock">
+                    <div class="game-content__image">
+                        <img src="images/icon-rock.svg" alt="rock">
+                    </div>
+                </div>
+                <div class="game-content__game-choice game-content__game-choice_lizard" data-choice="lizard">
+                    <div class="game-content__image">
+                        <img src="images/icon-lizard.svg" alt="lizard">
+                    </div>
+                </div>
+                <div class="game-content__game-choice game-content__game-choice_spock" data-choice="spock">
+                    <div class="game-content__image">
+                        <img src="images/icon-spock.svg" alt="spock">
+                    </div>
+                </div>
+                <div class="game-content__game-choice game-content__game-choice-computer">
+                    <div class="game-content__image">
+                        <span class="game-content__countdown-text"></span>
+                        <img class="game-content__game-choice-image" src="" alt="computer choice">
+                    </div>
+                </div>
+                <div class="game-content__result">
+                    <span class="game-content__result-text">You Win</span>
+                    <button class="game-content__result-button">Play again</button>
+                </div>
+            </div>
+        </div>
+
+        <button class="rules">Rules</button>
+
+        <div class="modal-container">
+            <div class="modal">
+                <div class="modal__header">
+                    <h2 class="modal__text">Rules</h2>
+                    <button class="modal__close-button"></button>
+                </div>
+                <img class="modal__image" src="images/image-rules-bonus.svg" alt="rules image">
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
