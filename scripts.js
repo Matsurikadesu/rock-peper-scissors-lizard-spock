@@ -33,12 +33,14 @@
             resultTextElement.textContent = 'Draw';
         }else if(rule[computerChoice].includes(userChoice)){
             resultTextElement.textContent = 'You lose';
-            gameContentElement.classList.add('game-content_lost');
+            setTimeout(() => gameChoiceComputerElement.classList.add('game-content__game-choice_win'), 600);
+
             if(score > 0){
                 scoreNumberElement.textContent = score - 1; 
             }
         }else{
             resultTextElement.textContent = 'You win';
+            setTimeout(() => document.querySelector('.game-content__game-choice_active').classList.add('game-content__game-choice_win'), 600);
             scoreNumberElement.textContent = score + 1;
         }
     };
@@ -54,7 +56,7 @@
             randomResult = gameChoicesArray[getRandomNumber()];
 
             showResult(selectedChoice, randomResult);
-            setTimeout(() => gameContentElement.classList.add('game-content_reveal-result'), 500)
+            setTimeout(() => gameContentElement.classList.add('game-content_reveal-result'), 300)
 
             countdownTextElement.textContent = '';
             gameChoiceComputerElement.classList.add(`game-content__game-choice_${randomResult}`);
@@ -72,7 +74,7 @@
 
     const playAgainEvent = () => {
         const activeChoiceElement = document.querySelector('.game-content__game-choice_active');
-
+        gameChoiceElements.forEach(item => item.classList.remove('game-content__game-choice_win'));
         gameContentElement.classList.remove('game-content_reveal-result')
         gameChoiceComputerElement.classList.remove(`game-content__game-choice_${randomResult}`);
         gameChoiceImageElement.src = '';
