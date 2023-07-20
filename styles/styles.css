@@ -274,14 +274,14 @@
     visibility: hidden;
     transform: scale(var(--game-choice-active-scale)) translate(calc(var(--game-choice-x-position) * var(--animation-ratio)), 75px);
     transition: all var(--timing-animation);
-    pointer-events: none
+    pointer-events: none;
 }
 
 .game-content__game-choice_active{
     opacity: 1 !important;
     visibility: visible !important;
     transform: scale(var(--game-choice-active-scale)) translate(calc(var(--game-choice-x-position) * var(--animation-ratio) * -1), 75px);
-    pointer-events: none
+    pointer-events: none;
 }
 
 .game-content__game-choice_win{
